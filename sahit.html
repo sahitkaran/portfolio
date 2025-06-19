@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahit Karan Botta | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B5CF6; /* Vibrant Purple */
+            --primary-color-hover: #7C3AED;
+            --bg-color: #0a0a0a;
+            --text-color: #e5e5e5;
+            --card-bg: #111111;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .text-glow {
+            text-shadow: 0 0 8px var(--primary-color), 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+        .skill-card {
+            background-color: rgba(23, 23, 23, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(139, 92, 246, 0.1);
+        }
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(139, 92, 246, 0.2);
+        }
+        .header {
+            transition: background-color 0.3s ease;
+        }
+        .bg-primary { background-color: var(--primary-color); }
+        .hover\:bg-primary-hover:hover { background-color: var(--primary-color-hover); }
+        .text-primary { color: var(--primary-color); }
+        .border-primary { border-color: var(--primary-color); }
+        .hover\:text-primary:hover { color: var(--primary-color); }
+        .shadow-primary { box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4), 0 8px 10px -6px rgba(139, 92, 246, 0.4); }
+        .bg-gradient-primary { background-image: linear-gradient(to right, var(--primary-color), #3b82f6); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 py-4 px-4 sm:px-8 bg-black/30 backdrop-blur-sm">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary text-glow">Sahit Botta</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-300 hover:text-primary transition">About</a>
+                <a href="https://drive.google.com/file/d/1rStidNKGRMuJGLIF18ATSs73MjyWGSWv/view">Resume</a>
+                <a href="#skills" class="text-gray-300 hover:text-primary transition">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-primary transition">Projects</a>
+                <a href="#contact" class="bg-primary hover:bg-primary-hover text-white font-bold py-2 px-4 rounded-lg transition">Contact</a>
+            </div>
+             <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#about" class="block text-gray-300 hover:text-primary py-2">About</a>
+            <a href="https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-globalnav-goto" target="_blank" class="block text-gray-300 hover:text-primary py-2">Resume</a>
+            <a href="#skills" class="block text-gray-300 hover:text-primary py-2">Skills</a>
+            <a href="#projects" class="block text-gray-300 hover:text-primary py-2">Projects</a>
+            <a href="#contact" class="block bg-primary hover:bg-primary-hover text-white font-bold py-2 px-4 rounded-lg mt-2 text-center">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 sm:px-8">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-around text-center md:text-left">
+            <div class="max-w-xl animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-black my-2 bg-clip-text text-transparent bg-gradient-primary">Sahit Botta</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-300">
+                    I build things for the web.
+                </h2>
+                <p class="mt-4 text-gray-400 max-w-lg mx-auto md:mx-0">
+                   Skilled in software development, machine learning, and systems programming, with a solid foundation in algorithms, data structures, and software design. Open to diverse technical roles including engineering, full stack development, and software verification. Eager to contribute to high-performance teams and solve complex, meaningful problems.
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                    <a href="https://www.linkedin.com/in/sahitbotta/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg>
+                        Connect on LinkedIn
+                    </a>
+                    <a href="#contact" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 md:mt-0 md:ml-12 flex-shrink-0 animate-fade-in">
+                <img src="https://placehold.co/300x300/8B5CF6/0A0A0A?text=Sahit Karan Botta" alt="Sahit Botta" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary shadow-primary">
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="py-20">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-12 animate-scroll-fade">About Me</h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-300">
+                    <p class="mb-4 animate-scroll-fade">
+                        I'm a recent Computer Science graduate from Penn State University with a passion for building user-focused and scalable applications. My journey in tech is driven by a curiosity to solve complex problems and a desire to create solutions that matter.
+                    </p>
+                    <p class="mb-4 animate-scroll-fade">
+                        My work blends full stack development, machine learning, and systems programming. I enjoy the challenge of working across the entire technology stack, from crafting beautiful front-end experiences to architecting robust back-end systems.
+                    </p>
+                    <p class="animate-scroll-fade">
+                        When I'm not coding, you can find me exploring new AI models and tools, contributing to open-source projects, or testing new software. I'm always expanding my skills and knowledge.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-scroll-fade">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="skill-card p-6 rounded-lg text-center animate-scroll-fade">
+                    <h3 class="text-xl font-bold text-primary mb-2">Languages</h3>
+                    <ul class="text-gray-400"><li>HTML / CSS</li><li>Python</li><li>C / C++</li><li>JavaScript</li><li>SQL</li><li>Java</li></ul>
+                </div>
+                <div class="skill-card p-6 rounded-lg text-center animate-scroll-fade">
+                    <h3 class="text-xl font-bold text-primary mb-2">Frameworks</h3>
+                    <ul class="text-gray-400"><li>React Native</li><li>React.js</li><li>Kivy</li><li>Git</li><li></li></ul>
+                </div>
+                <div class="skill-card p-6 rounded-lg text-center animate-scroll-fade">
+                    <h3 class="text-xl font-bold text-primary mb-2">AI/ML</h3>
+                    <ul class="text-gray-400"><li>OpenAI GPT</li><li>Hugging Face</li><li>TensorFlow</li><li>PyTorch</li><li>Scikit-learn</li></ul>
+                </div>
+                <div class="skill-card p-6 rounded-lg text-center animate-scroll-fade">
+                    <h3 class="text-xl font-bold text-primary mb-2">Systems</h3>
+                    <ul class="text-gray-400"><li>POSIX Threads</li><li>Linux</li><li>REST APIs</li><li>CI/CD</li><li>Memory Management</li></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-scroll-fade">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">EmotiBit Live Monitor</h3>
+                        <p class="mt-2 text-gray-400">Kivy app to visualize PPG and EDA signals, track session data, and display heart rate/emotion summaries.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Embedded Systems</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                     <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">AI Fitness Coach Chatbot</h3>
+                        <p class="mt-2 text-gray-400">NLP chatbot that provides personalized fitness and diet plans using JSON data and machine learning.</p>
+                         <div class="mt-4 flex flex-wrap gap-2">
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">NLTK</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">ML</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                     <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">POSIX Thread Pool</h3>
+                        <p class="mt-2 text-gray-400">C program for efficient matrix multiplication using threads, mutexes, and semaphores.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">C</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">POSIX</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">React Native Pokedex</h3>
+                        <p class="mt-2 text-gray-400">Mobile app displaying Pokémon data from an API in an interactive and searchable format.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">React Native</span>
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">API</span>
+                        </div>
+                    </div>
+                </div>
+	               <!-- Project Card 5 -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">NapNav Airport Pods</h3>
+                        <p class="mt-2 text-gray-400">Collaborated with stakeholders to design nap pods and a companion mobile app for reservations and navigation to enhance passenger layover comfort.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Product Design</span>
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Market Analysis</span>
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Risk Assessment</span>
+                        </div>
+                    </div>
+                </div>
+	               <!-- Project Card 6 -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">QSR Food Ordering App</h3>
+                        <p class="mt-2 text-gray-400">   
+A React Native app with Firebase auth, cart management, local notifications and a kitchen token system for efficient dine-in and takeaway orders.
+</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">React Native</span>
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Firebase</span>
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-scroll-fade">Education</h2>
+            <div class="max-w-3xl mx-auto bg-gray-900/50 p-8 rounded-lg border border-gray-800 animate-scroll-fade">
+                <h3 class="text-2xl font-bold text-primary">Penn State University</h3>
+                <p class="text-gray-400 italic">May 2025</p>
+                <p class="mt-2 text-lg text-gray-300">B.S. in Computer Science</p>
+                <p class="text-gray-400">GPA: 3.44</p>
+                <hr class="my-4 border-gray-700">
+                <p class="text-lg text-gray-300">Lean Six Sigma Yellow Belt Certified</p>
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="py-20 text-center">
+             <h2 class="text-4xl font-bold text-center mb-4 animate-scroll-fade">Get In Touch</h2>
+             <p class="text-gray-400 mb-8 max-w-2xl mx-auto animate-scroll-fade">I'm currently open to new opportunities and collaborations. Whether you have a question or just want to say hi, feel free to reach out. Let's create something great together!</p>
+             <a href="mailto:sahitkbotta@gmail.com" class="inline-block bg-primary hover:bg-primary-hover text-white font-bold text-lg py-4 px-8 rounded-lg transition-transform transform hover:scale-105 animate-scroll-fade">
+                sahitkbotta@gmail.com
+             </a>
+             <div class="mt-12 animate-scroll-fade">
+                 <p class="text-gray-400">Or find me on:</p>
+                 <div class="flex justify-center space-x-6 mt-4">
+                      <a href="https://www.linkedin.com/in/sahitbotta/" target="_blank" class="text-gray-400 hover:text-primary transition">LinkedIn</a>
+                      <a href="https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-globalnav-goto" target="_blank" class="text-gray-400 hover:text-primary transition">Resume</a>
+                 </div>
+             </div>
+        </section>
+
+    </main>
+
+    <footer class="py-6 bg-gray-900/50 text-center text-gray-500">
+        <p>&copy; 2025 Sahit Botta</p>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- GSAP Animations ---
+
+        // Hero Section onLoad animation
+        gsap.from(".animate-fade-in-up", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+        gsap.from(".animate-fade-in", {
+            duration: 1.5,
+            opacity: 0,
+            delay: 0.5,
+            ease: "power3.out"
+        });
+
+        // Sections onScroll animation
+        gsap.utils.toArray('.animate-scroll-fade').forEach(elem => {
+            gsap.from(elem, {
+                duration: 1.2,
+                y: 50,
+                opacity: 0,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: elem,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Header style on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/80');
+            } else {
+                header.classList.remove('bg-black/80');
+            }
+        });
+
+    </script>
+
+</body>
+</html>
