@@ -73,7 +73,7 @@
             <a href="#" class="text-2xl font-bold text-primary text-glow">Sahit Botta</a>
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#about" class="text-gray-300 hover:text-primary transition">About</a>
-                <a href="https://drive.google.com/file/d/1rStidNKGRMuJGLIF18ATSs73MjyWGSWv/view?usp=sharing">Resume</a>
+                <a href="https://drive.google.com/file/d/1rStidNKGRMuJGLIF18ATSs73MjyWGSWv/view?usp=sharing" target="_blank" class="text-gray-300 hover:text-primary transition">Resume</a>
                 <a href="#skills" class="text-gray-300 hover:text-primary transition">Skills</a>
                 <a href="#projects" class="text-gray-300 hover:text-primary transition">Projects</a>
                 <a href="#contact" class="bg-primary hover:bg-primary-hover text-white font-bold py-2 px-4 rounded-lg transition">Contact</a>
@@ -109,8 +109,8 @@
                         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg>
                         LinkedIn
                     </a>
-                    <a href="#contact" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition">
-                        Sahitkbotta@gmail.com
+                    <a href="mailto:sahitkbotta@gmail.com" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition">
+                        sahitkbotta@gmail.com
                     </a>
                 </div>
             </div>
@@ -164,7 +164,55 @@
         <section id="projects" class="py-20">
             <h2 class="text-4xl font-bold text-center mb-12 animate-scroll-fade">Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
+                 <!-- Project Card -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">COVID-19 Survival Prediction</h3>
+                        <p class="mt-2 text-gray-400">Developed ML models (SVM, Logistic Regression) to predict patient survival, using GridSearchCV for tuning and F1-score for evaluation.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Scikit-learn</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                     <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">NapNav Airport Pods</h3>
+                        <p class="mt-2 text-gray-400">Designed nap pods and a companion mobile app for reservations. Conducted market analysis and risk assessment to enhance passenger layover comfort.</p>
+                         <div class="mt-4 flex flex-wrap gap-2">
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Product Design</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Mobile App</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Market Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                     <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">Zip Code Weather App</h3>
+                        <p class="mt-2 text-gray-400">React Native app to manage a list of zip codes and view real-time weather from the OpenWeatherMap API with a detailed view.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">React Native</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">API</span>
+                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card -->
+                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">QSR Food Ordering App</h3>
+                        <p class="mt-2 text-gray-400">A React Native app with Firebase auth, cart management, and a kitchen token system for efficient dine-in and takeaway orders.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">React Native</span>
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Firebase</span>
+                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project Card -->
                 <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-primary">EmotiBit Live Monitor</h3>
@@ -175,64 +223,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project Card 2 -->
+                <!-- Project Card -->
                 <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
-                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-primary">AI Fitness Coach Chatbot</h3>
-                        <p class="mt-2 text-gray-400">NLP chatbot that provides personalized fitness and diet plans using JSON data and machine learning.<br><br></p>
-                         <div class="mt-4 flex flex-wrap gap-2">
-                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
-                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">NLTK</span>
-                             <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">ML</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
-                     <div class="p-6">
+                    <div class="p-6">
                         <h3 class="text-2xl font-bold text-primary">POSIX Thread Pool</h3>
-                        <p class="mt-2 text-gray-400">C program for efficient matrix multiplication using threads, mutexes, and semaphores.<br><br></p>
+                        <p class="mt-2 text-gray-400">C program for efficient matrix multiplication using threads, mutexes, and semaphores for parallel processing.</p>
                         <div class="mt-4 flex flex-wrap gap-2">
                              <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">C</span>
                              <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">POSIX</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Card 4 -->
-                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-primary">React Native Pokedex</h3>
-                        <p class="mt-2 text-gray-400">Mobile app displaying Pokémon data from an API in an interactive and searchable format.<br><br></p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">React Native</span>
-                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
-                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">API</span>
-                        </div>
-                    </div>
-                </div>
-	               <!-- Project Card 5 -->
-                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-primary">NapNav Airport Pods</h3>
-                        <p class="mt-2 text-gray-400">Collaborated with stakeholders to design nap pods and a companion mobile app for reservations and navigation to enhance passenger layover comfort.</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Product Design</span>
-                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Market Analysis</span>
-                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Risk Assessment</span>
-                        </div>
-                    </div>
-                </div>
-	               <!-- Project Card 6 -->
-                <div class="project-card rounded-2xl overflow-hidden group animate-scroll-fade">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-primary">QSR Food Ordering App</h3>
-                        <p class="mt-2 text-gray-400">   
-A React Native app with Firebase auth, cart management, local notifications and a kitchen token system for efficient dine-in and takeaway orders.
-</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">React Native</span>
-                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Firebase</span>
-                            <span class="bg-gray-700 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
                         </div>
                     </div>
                 </div>
@@ -249,6 +247,25 @@ A React Native app with Firebase auth, cart management, local notifications and 
                 <p class="text-gray-400">GPA: 3.44</p>
                 <hr class="my-4 border-gray-700">
                 <p class="text-lg text-gray-300">Lean Six Sigma Yellow Belt Certified</p>
+            </div>
+        </section>
+
+        <!-- Relevant Coursework Section -->
+        <section id="coursework" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-scroll-fade">Relevant Coursework</h2>
+            <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 text-gray-300 animate-scroll-fade">
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Data Structures & Algorithms</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Operating Systems</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Software Design Methods</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Computer Organization & Design</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Database Management Systems</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">System Programming</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">OOP with Web</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Artificial Intelligence (AI)</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Programming Language Concepts</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Theory of Computation</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Digital Design</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg text-center">Discrete Math for CS</div>
             </div>
         </section>
 
