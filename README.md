@@ -1,10 +1,10 @@
-# 💻 Sahit Botta | Full Stack Developer Portfolio
+# Sahit Botta | Full Stack Developer Portfolio
 
 Welcome to the source code for my personal portfolio website, built to showcase my skills, experience, and projects in software engineering, full stack development, machine learning, and systems programming.
 
 🔗 **Live Site**: [sahitkaran.github.io](https://sahitkaran.github.io/portfolio)
 
-## ✨ Features
+##  Features
 
 - Mobile-responsive design using **Tailwind CSS**
 - Smooth animations with **GSAP + ScrollTrigger**
@@ -12,7 +12,7 @@ Welcome to the source code for my personal portfolio website, built to showcase 
 - Resume, contact links, and social media integration
 - Google Analytics tracking
 
-## 🧑‍💻 Technologies Used
+##  Technologies Used
 
 - **HTML5**, **CSS3**, **JavaScript**
 - **Tailwind CSS** for responsive design
