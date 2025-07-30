@@ -2,7 +2,7 @@
 
 Welcome to the source code for my personal portfolio website, built to showcase my skills, experience, and projects in software engineering, full stack development, machine learning, and systems programming.
 
-🔗 **Live Site**: [sahitkaran.github.io](https://sahitkaran.github.io/portfolio)
+🔗 **Live Site**: [sahitkaran.github.io](https://sahitbotta.com)
 
 ##  Features
 
